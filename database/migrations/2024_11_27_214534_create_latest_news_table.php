@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('heading_banners', function (Blueprint $table) {
+        Schema::create('latest_news', function (Blueprint $table) {
             $table->id();
             $table->uuid();
-
             $table->string('image');
-            $table->string('name');
-            $table->boolean('is_active')->default(true);
+            $table->string('title_en');
+            $table->string('title_ch');
+            $table->text('text_en');
+            $table->text('text_ch');
+            $table->boolean('is_active')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('heading_banners');
+        Schema::dropIfExists('latest_news');
     }
 };
