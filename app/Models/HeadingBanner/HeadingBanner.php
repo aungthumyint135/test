@@ -9,6 +9,7 @@ class HeadingBanner extends Model
 {
     protected $fillable =[
       'is_active',
-      'image'
+      'image',
+      'name',
     ];
 }

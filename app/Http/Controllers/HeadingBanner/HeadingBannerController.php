@@ -33,7 +33,7 @@ class HeadingBannerController extends Controller
      */
     public function create()
     {
-        //
+        return view('heading-banner.create');
     }
 
     /**
@@ -41,7 +41,8 @@ class HeadingBannerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->service->createHeadingBanner($request);
+        return redirect()->route('portal.heading-banners.index');
     }
 
     /**

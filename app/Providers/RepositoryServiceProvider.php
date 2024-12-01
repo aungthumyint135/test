@@ -25,7 +25,7 @@ class RepositoryServiceProvider extends ServiceProvider
 
         $models = [
             'User', 'RolePrivilege', 'PermissionGroup', 'Role', 'Permission',
-            'HeadingBanner'
+            'HeadingBanner', 'Client', 'LatestNews'
         ];
 
         foreach ($models as $model) {
